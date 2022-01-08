@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Extensión Iniciativa Popular",
+  "author": "Lunar Cat",
+  "version": "1.0",
+  "description": "Permite filtrar de mejor forma los datos proporcionados por la página Iniciativa Popular.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Filtro"
+  },
+  "permissions": [
+    "activeTab", "scripting", "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://iniciativas.chileconvencion.cl/m/iniciativa_popular/*"],
+      "js": ["app.js"]
+    }
+  ]
+}
